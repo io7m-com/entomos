@@ -219,7 +219,11 @@ The _checked_ reader validates that the file sections obey the declared
 cardinality and ordering rules, and that the file is well-formed in other
 ways (such as not being truncated). It also checks that the file tag matches
 that of the declared format, and that the major version of the file is equal
-to one of the declared versions.
+to one of the declared versions. The `entomos` implementation performs the
+minimum amount of I/O needed to validate files, and critically does not
+read the entire file into memory (although it will perform one seek for
+each section in the file in order to read section tags and sizes). No data
+within sections is actually read until `reader.dataChannel()` is used.
 
 All interfaces produce detailed
 [structured exceptions](https://github.com/io7m-com/seltzer) in the case
