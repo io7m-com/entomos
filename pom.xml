@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.io7m.primogenitor</groupId>
+    <artifactId>com.io7m.primogenitor.full</artifactId>
+    <version>8.5.0</version>
+  </parent>
+
+  <groupId>com.io7m.entomos</groupId>
+  <artifactId>com.io7m.entomos</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+  <name>com.io7m.entomos</name>
+  <description>Sectional file format library.</description>
+  <url>https://www.io7m.com/software/entomos/</url>
+
+  <modules>
+    <module>com.io7m.entomos.core</module>
+    <module>com.io7m.entomos.tests</module>
+  </modules>
+
+  <properties>
+    <!-- Configuration. -->
+    <io7m.api.previousVersion>0.0.1-SNAPSHOT</io7m.api.previousVersion>
+    <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
+
+    <!-- io7m dependencies. -->
+    <com.io7m.immutables-style.version>1.0.0</com.io7m.immutables-style.version>
+    <com.io7m.jaffirm.version>4.0.1</com.io7m.jaffirm.version>
+    <com.io7m.jbssio.version>3.0.0</com.io7m.jbssio.version>
+    <com.io7m.jmulticlose.version>1.1.3</com.io7m.jmulticlose.version>
+    <com.io7m.seltzer.version>1.2.0</com.io7m.seltzer.version>
+
+    <!-- Third-party dependencies. -->
+    <net.jqwik.version>1.9.0</net.jqwik.version>
+    <org.immutables.value.version>2.10.1</org.immutables.value.version>
+    <org.junit.version>5.11.1</org.junit.version>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>ISC</name>
+      <url>https://www.io7m.com/license/isc.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://www.github.com/io7m-com/entomos</url>
+    <connection>scm:git:https://www.github.com/io7m-com/entomos</connection>
+    <developerConnection>scm:git:https://www.github.com/io7m-com/entomos</developerConnection>
+  </scm>
+
+  <inceptionYear>2025</inceptionYear>
+
+  <developers>
+    <developer>
+      <id>io7m</id>
+      <name>Mark Raynsford</name>
+      <email>code@io7m.com</email>
+      <url>https://www.io7m.com</url>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <url>https://www.github.com/io7m-com/entomos/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <distributionManagement>
+    <site>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://www.io7m.com/software/entomos</url>
+    </site>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <ciManagement>
+    <system>GitHub Actions</system>
+    <url>https://www.github.com/io7m-com/entomos/actions</url>
+  </ciManagement>
+
+  <prerequisites>
+    <maven>3.8.3</maven>
+  </prerequisites>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Core -->
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>value</artifactId>
+        <version>${org.immutables.value.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.immutables-style</groupId>
+        <artifactId>com.io7m.immutables-style</artifactId>
+        <version>${com.io7m.immutables-style.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jmulticlose</groupId>
+        <artifactId>com.io7m.jmulticlose.core</artifactId>
+        <version>${com.io7m.jmulticlose.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.wendover</groupId>
+        <artifactId>com.io7m.wendover.core</artifactId>
+        <version>1.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.verona</groupId>
+        <artifactId>com.io7m.verona.core</artifactId>
+        <version>1.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jaffirm</groupId>
+        <artifactId>com.io7m.jaffirm.core</artifactId>
+        <version>4.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.seltzer</groupId>
+        <artifactId>com.io7m.seltzer.bom</artifactId>
+        <version>${com.io7m.seltzer.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jbssio</groupId>
+        <artifactId>com.io7m.jbssio.bom</artifactId>
+        <version>${com.io7m.jbssio.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.19.0</version>
+      </dependency>
+
+      <!-- Build metadata -->
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.annotation.bundle</artifactId>
+        <version>2.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.annotation.versioning</artifactId>
+        <version>1.1.2</version>
+      </dependency>
+
+      <!-- Test suite -->
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${org.junit.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>net.jqwik</groupId>
+        <artifactId>jqwik-api</artifactId>
+        <version>${net.jqwik.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.jqwik</groupId>
+        <artifactId>jqwik-engine</artifactId>
+        <version>${net.jqwik.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.jqno.equalsverifier</groupId>
+        <artifactId>equalsverifier</artifactId>
+        <version>3.16.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-bom</artifactId>
+        <version>2.0.16</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.5.8</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <configuration>
+            <suppressionsLocation>checkstyle-filter.xml</suppressionsLocation>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-plugin-plugin</artifactId>
+          <version>3.15.0</version>
+        </plugin>
+
+        <!-- Configure compiler -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <annotationProcessorPaths>
+              <dependency>
+                <groupId>org.immutables</groupId>
+                <artifactId>value</artifactId>
+                <version>${org.immutables.value.version}</version>
+              </dependency>
+            </annotationProcessorPaths>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>com.io7m.stmp</groupId>
+        <artifactId>string-template-maven-plugin</artifactId>
+        <version>2.0.0</version>
+      </plugin>
+
+      <!-- Generate a site -->
+      <plugin>
+        <groupId>com.io7m.minisite</groupId>
+        <artifactId>com.io7m.minisite.maven_plugin</artifactId>
+        <inherited>false</inherited>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
