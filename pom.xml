@@ -14,7 +14,7 @@
 
   <groupId>com.io7m.entomos</groupId>
   <artifactId>com.io7m.entomos</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <packaging>pom</packaging>
   <name>com.io7m.entomos</name>
@@ -28,7 +28,7 @@
 
   <properties>
     <!-- Configuration. -->
-    <io7m.api.previousVersion>0.0.1-SNAPSHOT</io7m.api.previousVersion>
+    <io7m.api.previousVersion>0.0.1</io7m.api.previousVersion>
     <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
 
     <!-- io7m dependencies. -->
