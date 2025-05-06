@@ -39,7 +39,7 @@
     <com.io7m.seltzer.version>1.2.0</com.io7m.seltzer.version>
 
     <!-- Third-party dependencies. -->
-    <net.jqwik.version>1.9.0</net.jqwik.version>
+    <net.jqwik.version>1.9.2</net.jqwik.version>
     <org.immutables.value.version>2.10.1</org.immutables.value.version>
     <org.junit.version>5.11.1</org.junit.version>
   </properties>
