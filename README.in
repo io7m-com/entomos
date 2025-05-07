@@ -177,6 +177,7 @@ final var sectionC =
   EoFileSectionDescription.builder()
     .setTag(tagC)
     .setCardinality(ZERO_TO_ONE)
+    .setOrdering(MUST_BE_LAST)
     .build();
 
 // Format version 1.0
