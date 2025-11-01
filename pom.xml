@@ -41,7 +41,7 @@
     <!-- Third-party dependencies. -->
     <net.jqwik.version>1.9.3</net.jqwik.version>
     <org.immutables.value.version>2.11.4</org.immutables.value.version>
-    <org.junit.version>5.14.0</org.junit.version>
+    <org.junit.version>5.14.1</org.junit.version>
   </properties>
 
   <licenses>
