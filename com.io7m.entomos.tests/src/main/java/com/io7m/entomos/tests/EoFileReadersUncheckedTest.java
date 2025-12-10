@@ -339,6 +339,39 @@ public final class EoFileReadersUncheckedTest
     assertEquals("error-file-end-missing", ex.errorCode());
   }
 
+  @Test
+  public void testFileEndNonZeroSize(
+    final @TempDir Path directory)
+    throws Exception
+  {
+    final var file =
+      directory.resolve("file.bin");
+
+    try (final var channel = FileChannel.open(file, CREATE, WRITE)) {
+      try (final var writer =
+             this.bssWriters.createWriterFromChannel(
+               file.toUri(),
+               channel,
+               "File")) {
+        writer.writeU64BE(TAG_FILE);
+        writer.writeU32BE(1L);
+        writer.writeU32BE(0L);
+
+        writer.writeU64BE(TAG_END);
+        writer.writeU32BE(0L);
+        writer.writeU32BE(30L);
+      }
+    }
+
+    final var ex =
+      assertThrows(
+        EoException.class, () -> {
+          this.readers.forFile(TAG_FILE, TAG_END, file, null);
+        });
+
+    SSLogging.logMDC(LOG, Level.DEBUG, ex);
+    assertEquals("error-file-end-non-zero", ex.errorCode());
+  }
 
   private static SeekableByteChannel brokenChannel()
   {

@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <c:changelog project="com.io7m.entomos" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2025-05-06T21:07:02+00:00" is-open="false" ticket-system="com.github.io7m.entomos" version="0.0.1">
+    <c:release date="2025-05-06T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.entomos" version="0.0.1">
       <c:changes/>
+    </c:release>
+    <c:release date="2025-12-10T20:27:57+00:00" is-open="false" ticket-system="com.github.io7m.entomos" version="1.0.0">
+      <c:changes>
+        <c:change date="2025-06-01T00:00:00+00:00" summary="Update org.junit:junit-bom:5.11.1 → 5.13.0."/>
+        <c:change date="2025-07-01T00:00:00+00:00" summary="Update net.jqwik.version:1.9.2 → 1.9.3."/>
+        <c:change date="2025-08-01T00:00:00+00:00" summary="Update commons-io:commons-io:2.19.0 → 2.20.0."/>
+        <c:change date="2025-08-01T00:00:00+00:00" summary="Update org.junit:junit-bom:5.13.0 → 5.13.4."/>
+        <c:change date="2025-08-17T00:00:00+00:00" summary="Update org.immutables:value:2.10.1 → 2.11.1."/>
+        <c:change date="2025-10-01T00:00:00+00:00" summary="Update ch.qos.logback:logback-classic:1.5.18 → 1.5.19."/>
+        <c:change date="2025-10-01T00:00:00+00:00" summary="Update org.immutables:value:2.11.3 → 2.11.4."/>
+        <c:change date="2025-10-25T00:00:00+00:00" summary="Update org.junit:junit-bom:5.13.4 → 5.14.0."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update actions/upload-artifact:4.6.2 → 5.0.0."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update ch.qos.logback:logback-classic:1.5.19 → 1.5.20."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.junit:junit-bom:5.14.0 → 5.14.1."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.immutables:value:2.11.4 → 2.11.6."/>
+        <c:change date="2025-12-01T00:00:00+00:00" summary="Update commons-io:commons-io:2.20.0 → 2.21.0."/>
+        <c:change date="2025-12-01T00:00:00+00:00" summary="Update ch.qos.logback:logback-classic:1.5.20 → 1.5.21."/>
+        <c:change date="2025-12-10T00:00:00+00:00" summary="Initial release."/>
+      </c:changes>
     </c:release>
   </c:releases>
   <c:ticket-systems>

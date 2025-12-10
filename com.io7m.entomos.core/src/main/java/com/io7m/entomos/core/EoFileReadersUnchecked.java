@@ -257,6 +257,10 @@ public final class EoFileReadersUnchecked
       final var size =
         this.reader.readU64BE("SectionDataSize");
 
+      if (tag == this.endTag && size != 0L) {
+        throw this.errorFileEndNonZero();
+      }
+
       this.reader.skip(size);
       seekTo16(this.reader);
 
@@ -268,6 +272,19 @@ public final class EoFileReadersUnchecked
           .build()
       );
       return tag != this.endTag;
+    }
+
+    private EoException errorFileEndNonZero()
+    {
+      return new EoException(
+        "File has an 'end' section of a non-zero size.",
+        "error-file-end-non-zero",
+        Map.ofEntries(
+          Map.entry("File", this.uri.toString()),
+          Map.entry("Offset", this.getOffset())
+        ),
+        Optional.empty()
+      );
     }
 
     private EoException errorFileEndMissing(
