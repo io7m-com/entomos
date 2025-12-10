@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <c:changelog project="com.io7m.entomos" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2025-05-06T21:07:02+00:00" is-open="false" ticket-system="com.github.io7m.entomos" version="0.0.1">
+    <c:release date="2025-05-06T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.entomos" version="0.0.1">
       <c:changes/>
+    </c:release>
+    <c:release date="2025-12-10T20:26:13+00:00" is-open="true" ticket-system="com.github.io7m.entomos" version="1.0.0">
+      <c:changes>
+        <c:change date="2025-12-10T20:26:13+00:00" summary="Initial release."/>
+      </c:changes>
     </c:release>
   </c:releases>
   <c:ticket-systems>
